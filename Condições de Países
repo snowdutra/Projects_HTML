@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PAÍSES </title>
+</head>
+<body>
+    <h1>QUAL SEU PAÍS ??</h1>
+    Digite o seu país: <input type="object" name = "paiss" id = "paiss">
+    <input type="button" value="Verificar" onclick="buscar()">
+    <div id = "res">
+
+    </div>
+    <script>
+        var pais = window.document.getElementById("paiss")
+        
+        function buscar() {
+        var pais = window.document.getElementById("paiss")
+        var res = window.document.getElementById("res")
+        var qual = Object(pais.value)   
+        res.innerHTML = `<p> Seu país é o <strong>${qual}</strong>`
+          if (pais){
+            res.innerHTML += (`<p> <strong> Você escolheu o ${pais.value} como seu pais </strong> </p>`)
+
+            } 
+         }
+    </script>
+</body> <style>
+    body{
+        background-color: rgb(201, 22, 22)
+    }
+</style>
+</html>
